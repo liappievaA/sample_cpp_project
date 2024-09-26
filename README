@@ -1,0 +1,14 @@
+To create folder build
+``` BASH
+cmake -B build/ -S . -G "MinGW Makefiles"
+```
+To compile
+``` BASH
+cmake --build build/
+```
+To create hidden folder git
+```BASH
+git init
+```
+To show git the files in which we want to see changes
+```BASH
