@@ -1,9 +1,9 @@
 To create folder build
-``` console
+```console
 cmake -B build/ -S . -G "MinGW Makefiles"
 ```
 To compile
-``` console
+```console
 cmake --build build/
 ```
 To create hidden folder git
