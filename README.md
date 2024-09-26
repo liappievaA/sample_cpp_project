@@ -42,3 +42,6 @@ PS> git commit -m 'cmake minimum version lower'
 PS> git push
 ```
 #### Github Action
+Create a folder .github, there create a folder workflows. then create a file test.yaml where we white
+```console
+
