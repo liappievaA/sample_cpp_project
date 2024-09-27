@@ -53,4 +53,27 @@ cmake --build .
 ```
 ... we can customize cmake in github action
 
+#### Unit tests
 
+We can use googletest or Boost.Test
+
+First we need to install googletest
+```console
+PS> git clone https://github.com/google/googletest.git -b v1.15.2
+PS> cd googletest/
+PS> mkdir build/
+PS> cmake -G "MinGW Makefiles" --install-prefix "C:\Program Files (x86)\googletest-distribution" ..
+PS> cd..
+PS> cmake --install build --prefix '/c/Program Files (x86)/googletest-distribution'
+```
+For my computer I need to add next lines in all CmakeLists.txt
+```cmake
+set( CMAKE_CXX_COMPILER "/msys64/ucrt64/bin/g++.exe" )
+set( CMAKE_C_COMPILER "/msys64/ucrt64/bin/gcc.exe" )
+```
+##### Then we need to write tests
+First, create a file "test_add.cpp" and add in CmakeLists.txt next ... 
+```cmake
+add_subdirectory(googletest)
+```
+and add in test.yaml - run: ./build/tests
