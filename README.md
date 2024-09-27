@@ -42,6 +42,15 @@ PS> git commit -m 'cmake minimum version lower'
 PS> git push
 ```
 #### Github Action
-Create a folder .github, there create a folder workflows. then create a file test.yaml where we white
+Create a folder .github, there create a folder workflows, then create a file test.yaml
+
+Instead of write evety time ...
 ```console
+cd build/
+cmake ..
+cmake --build .
+./main 45
+```
+... we can customize cmake in github action
+
 
