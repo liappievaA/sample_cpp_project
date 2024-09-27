@@ -3,7 +3,8 @@ cmake_minimum_required(VERSION 3.11)
 # set( CMAKE_C_COMPILER "/msys64/ucrt64/bin/gcc.exe" )
 project(sample_cpp_project)
 # add_subdirectory(googletest)
-add_executable(main main.cpp my_add.cpp)
+include_directories(include)
+add_executable(main main.cpp src/my_add.cpp)
 
 include (FetchContent)
 FetchContent_Declare(
@@ -14,7 +15,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 
 enable_testing()
-add_executable(tests test_add.cpp my_add.cpp)
+add_executable(tests test_add.cpp src/my_add.cpp)
 target_link_libraries(tests gtest gtest_main)
 
 include(GoogleTest)
