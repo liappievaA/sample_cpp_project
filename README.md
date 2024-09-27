@@ -72,8 +72,4 @@ set( CMAKE_CXX_COMPILER "/msys64/ucrt64/bin/g++.exe" )
 set( CMAKE_C_COMPILER "/msys64/ucrt64/bin/gcc.exe" )
 ```
 ##### Then we need to write tests
-First, create a file "test_add.cpp" and add in CmakeLists.txt next ... 
-```cmake
-add_subdirectory(googletest)
-```
-and add in test.yaml - run: ./build/tests
+First, create a file "test_add.cpp" and add in test.yaml - run: ./build/tests
